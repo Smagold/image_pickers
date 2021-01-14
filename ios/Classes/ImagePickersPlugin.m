@@ -85,6 +85,7 @@ static NSString *const CHANNEL_NAME = @"flutter/image_pickers";
         
         ZLPhotoConfiguration *configuration =[ZLPhotoConfiguration defaultPhotoConfiguration];
         configuration.maxSelectCount = selectCount;//最多选择多少张图
+        configuration.allowSlideSelect = NO;
         configuration.mutuallyExclusiveSelectInMix = NO;//不允许混合选择
         configuration.allowTakePhotoInLibrary =showCamera;//是否显示摄像头
         configuration.allowSelectOriginal =NO;//不选择原图
@@ -220,6 +221,7 @@ static NSString *const CHANNEL_NAME = @"flutter/image_pickers";
             
             ZLPhotoActionSheet *ac = [[ZLPhotoActionSheet alloc] init];
             ac.configuration.maxSelectCount = selectCount;//最多选择多少张图
+            ac.configuration.allowSlideSelect = NO;
             ac.configuration.mutuallyExclusiveSelectInMix = NO;//不允许混合选择
             ac.configuration.allowTakePhotoInLibrary =showCamera;//是否显示摄像头
             ac.configuration.allowSelectOriginal =NO;//不选择原图
